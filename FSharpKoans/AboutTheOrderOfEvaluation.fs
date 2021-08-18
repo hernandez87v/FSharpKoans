@@ -17,8 +17,8 @@ module ``about the order of evaluation`` =
             x + y
 
         let result = add (add 5 8) (add 1 1)
-
-        AssertEquality result __
+      
+        AssertEquality result
 
         (* TRY IT: What happens if you remove the parenthesis?*)
 
@@ -31,5 +31,5 @@ module ``about the order of evaluation`` =
             x * 2
 
         let result = double <| add 5 8
-
-        AssertEquality result __
+        
+        AssertEquality result
