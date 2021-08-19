@@ -14,19 +14,19 @@ module ``about strings`` =
     let StringValue() =
         let message = "hello"
 
-        AssertEquality message __
+        AssertEquality message
 
     [<Koan>]
     let StringConcatValue() =
         let message = "hello " + "world"
-
-        AssertEquality message __
+        
+        AssertEquality message
 
     [<Koan>]
     let FormattingStringValues() =
         let message = sprintf "F# turns it to %d!" 11
-
-        AssertEquality message __
+        
+        AssertEquality message
 
         //NOTE: you can use printf to print to standard output
 
@@ -36,14 +36,14 @@ module ``about strings`` =
     [<Koan>]
     let FormattingOtherTypes() =
         let message = sprintf "hello %s" "world"
-
-        AssertEquality message __
+        
+        AssertEquality message
 
     [<Koan>]
     let FormattingAnything() =
         let message = sprintf "Formatting other types is as easy as: %A" (1, 2, 3)
-
-        AssertEquality message __
+        
+        AssertEquality message
 
     (* NOTE: For all the %formatters that you can use with string formatting 
              see: https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/plaintext-formatting *)
@@ -55,8 +55,8 @@ module ``about strings`` =
                         fragilistic\
                         expiali\
                         docious"
-
-        AssertEquality message __
+        
+        AssertEquality message
 
     [<Koan>]
     let Multiline() =
@@ -67,7 +67,7 @@ module ``about strings`` =
                         lines"
 
         AssertEquality
-              message __
+              message
 
     [<Koan>]
     let ExtractValues() =
@@ -79,15 +79,15 @@ module ``about strings`` =
  (* A single character is denoted using single quotes, example: 'c',
         not double quotes as you would use for a string *)
            
-        AssertEquality first __
-        AssertEquality other __
+        AssertEquality first
+        AssertEquality other
 
     [<Koan>]
     let ApplyWhatYouLearned() =
         (* It's time to apply what you've learned so far. Fill in the function below to
            make the asserts pass *)
         let getFunFacts x =
-            __
+            
 
         let funFactsAboutThree = getFunFacts 3
         let funFactsAboutSix = getFunFacts 6
