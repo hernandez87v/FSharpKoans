@@ -15,7 +15,7 @@ module ``about let`` =
     let LetBindsANameToAValue() =
         let x = 50
         
-        AssertEquality x
+        AssertEquality x 50
     
     (* In F#, values created with let are inferred to have a type like
        "int" for integer values, "string" for text values, and "bool" 
@@ -67,8 +67,8 @@ module ``about let`` =
     let ModifyingTheValueOfVariables() =
         let mutable x = 100
         x <- 200
-
-        AssertEquality x
+      
+        AssertEquality x 200
 
     [<Koan>]
     let YouCannotModifyALetBoundValueIfItIsNotMutable() =
@@ -81,5 +81,5 @@ module ``about let`` =
         //NOTE: Although you can't modify immutable values, it is possible
         //      to reuse the name of a value in some cases using "shadowing".
         let x = 100
-         
+        
         AssertEquality x
