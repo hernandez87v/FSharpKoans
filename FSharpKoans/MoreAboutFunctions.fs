@@ -20,7 +20,7 @@ module ``more about functions`` =
             colors
             |> List.map (fun x -> x + " " + x)
 
-        AssertEquality echo __
+        AssertEquality echo ["maize maize"; "blue blue"]
 
         (* The fun keyword allows you to create a function inline without giving
            it a name. These functions are known as anonymous functions, lambdas,
