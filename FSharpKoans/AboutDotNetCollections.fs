@@ -57,7 +57,7 @@ module ``about dot net collections`` =
         let original = [0..5]
         let result = Seq.skip 2 original
         
-        AssertEquality result <2 3 4 5>
+        AssertEquality result ([2; 3; 4; 5] |> seq<int>)
 
     [<Koan>]
     let FindingTheMax() =
@@ -71,7 +71,7 @@ module ``about dot net collections`` =
 
         let result = Seq.max values
         
-        AssertEquality result __
+        AssertEquality result 20
     
     [<Koan>]
     let FindingTheMaxUsingACondition() =
@@ -81,4 +81,4 @@ module ``about dot net collections`` =
         let names = [| "Harry"; "Lloyd"; "Nicholas"; "Mary"; "Joe"; |]
         let result = Seq.maxBy getNameLength names 
         
-        AssertEquality result __
+        AssertEquality result "Nicholas"
